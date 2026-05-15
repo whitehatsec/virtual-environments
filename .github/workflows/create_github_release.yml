@@ -13,7 +13,7 @@ jobs:
     - uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5  # v2
 
     - name: Create release for ${{ github.event.client_payload.ReleaseBranchName }}
-      uses: actions/create-release@v1.1.1
+      uses: actions/create-release@e9dc4ac22d57910765258fb6b199b62bfe0174da  # v1.1.1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
