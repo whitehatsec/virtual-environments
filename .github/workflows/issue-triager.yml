@@ -12,15 +12,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@50fbc622fc4ef5163becd7fab6573eac35f8462e  # v1
 
-    - uses: damccorm/tag-ur-it@master
+    - uses: damccorm/tag-ur-it@4689c0ef99e78276b2ff4851db5deec57bb3f615  # master
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
         configuration-path: "./triage-rules.yml"
 
     - if: always()
-      uses: actions/github-script@0.4.0
+      uses: actions/github-script@83e4cfe60ad25a2d0637965c993eb54c325d6d8d
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
